@@ -1,0 +1,11 @@
+dataset_id,model,val_loss,ndcg
+0,nrmf_simple_query,0.5674702525138855,0.6535
+1,nrmf_simple_query,0.5583505034446716,0.6741
+2,nrmf_simple_query,0.559969425201416,0.6692
+3,nrmf_simple_query,0.5756762623786926,0.6556
+4,nrmf_simple_query,0.5818614363670349,0.646
+5,nrmf_simple_query,0.5879144072532654,0.6401
+6,nrmf_simple_query,0.5931762456893921,0.6356
+7,nrmf_simple_query,0.5862497091293335,0.6487
+8,nrmf_simple_query,0.5871883630752563,0.6466
+9,nrmf_simple_query,0.583915650844574,0.6484
