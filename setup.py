@@ -20,8 +20,8 @@ setup(
     python_requires='==3.7.9',
     author='Kentaro Takiguchi',
     packages=find_packages(),
-    package_dir={"master-thesis": "src"},
+    package_dir={"field-interactions-in-document-ranking": "src"},
     package_data={},
-    install_requires=['annoy==1.*,>=1.16.3', 'click==7.*,>=7.1.2', 'google-api-python-client==1.*,>=1.12.8', 'google-cloud-storage==1.*,>=1.29.0', 'invoke==1.*,>=1.4.1', 'loguru==0.*,>=0.5.1', 'matplotlib==3.*,>=3.2.1', 'numpy==1.*,>=1.18.4', 'pandas==1.*,>=1.0.3', 'pingouin==0.*,>=0.3.7', 'pydot==1.*,>=1.4.1', 'python-dotenv==0.*,>=0.13.0', 'seaborn==0.*,>=0.11.0', 'sklearn==0.*,>=0.0.0', 'statsmodels==0.*,>=0.11.1', 'tensorflow==2.*,>=2.3.1', 'tensorflow-estimator==2.*,>=2.3.0', 'tqdm==4.*,>=4.46.0'],
+    install_requires=['annoy==1.*,>=1.16.3', 'click==7.*,>=7.1.2', 'google-api-python-client==1.*,>=1.12.8', 'google-cloud-storage==1.*,>=1.29.0', 'invoke==1.*,>=1.4.1', 'loguru==0.*,>=0.5.1', 'matplotlib==3.*,>=3.2.1', 'numpy==1.*,>=1.18.4', 'pandas==1.*,>=1.0.3', 'pingouin==0.*,>=0.3.7', 'pydot==1.*,>=1.4.1', 'python-dotenv==0.*,>=0.13.0', 'seaborn==0.*,>=0.11.0', 'sentencepiece==0.*,>=0.1.94', 'sklearn==0.*,>=0.0.0', 'statsmodels==0.*,>=0.11.1', 'tensorflow==2.*,>=2.3.1', 'tensorflow-estimator==2.*,>=2.3.0', 'tqdm==4.*,>=4.46.0', 'transformers==4.*,>=4.1.1'],
     extras_require={"dev": ["jupyter==1.*,>=1.0.0", "jupyterlab==2.*,>=2.1.5", "pytest==3.*,>=3.4.0"]},
 )

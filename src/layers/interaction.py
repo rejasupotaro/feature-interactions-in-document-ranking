@@ -102,6 +102,7 @@ class WeightedSelectedFeatureInteraction(tf.keras.layers.Layer):
             self.interaction(title, image, 0),
             self.interaction(title, ingredients, 0),
             self.interaction(query, title, 0),
+            self.interaction(ingredients, country, 0),
         ]
         interactions = layers.Add()(interactions)
         return interactions
