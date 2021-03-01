@@ -1,3 +1,2 @@
-# Study on Field Interactions in Neural Document Ranking
+# Multi-Field Models in Neural Recipe Ranking
 
-WIP
