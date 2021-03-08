@@ -1,6 +1,6 @@
 from typing import Dict, Tuple
 
-from src.config import cookpad, msmarco
+from src.config import cookpad
 from src.config.base_configs import TrainConfig, EvalConfig
 
 
@@ -21,15 +21,6 @@ def get_config(dataset: str, dataset_id: int, model_name: str, epochs: int, docs
             'fwfm_all_without_1st': cookpad.fwfm_all_without_1st_config,
         }[model_name](f'{dataset}.{dataset_id}', epochs, data_processor)
     else:
-        from src.data.msmarco.preprocessors import ConcatDataProcessor
-        data_processor = ConcatDataProcessor(docs)
-        train_config, eval_config = {
-            'ebr': msmarco.ebr_config,
-            'naive': msmarco.naive_config,
-            'nrmf_simple_query': msmarco.nrmf_simple_query_config,
-            'nrmf_simple_all': msmarco.nrmf_simple_all_config,
-            'fwfm_query': msmarco.fwfm_query_config,
-            'fwfm_all': msmarco.fwfm_all_config,
-        }[model_name](f'{dataset}.{dataset_id}', epochs, data_processor)
+        raise ValueError(f"Invalid dataset type is given: {dataset}")
 
     return train_config, eval_config

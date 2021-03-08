@@ -46,8 +46,8 @@ def main(job_dir: str, bucket_name: str, env: str, dataset: str, dataset_id: str
     log_filepath = f'{project_dir}/logs/{int(time())}.log'
     logger.add(log_filepath)
 
-    if dataset not in ['cookpad', 'msmarco']:
-        raise Exception(f'Unknown dataset is specified: {dataset}')
+    if dataset not in ['cookpad']:
+        raise ValueError(f'Unknown dataset is specified: {dataset}')
 
     if env == 'cloud':
         tf_config = json.loads(os.environ.get('TF_CONFIG', '{}'))
@@ -83,7 +83,8 @@ def main(job_dir: str, bucket_name: str, env: str, dataset: str, dataset_id: str
             filepaths.append('data/raw/recipes.json')
             filepaths.append(f'data/raw/en_2020-03-16T00_04_34_recipe_image_tagspace5000_300.pkl')
         else:
-            filepaths.append('data/raw/msmarco-docs.tsv.gz')
+            # Append appropriate files to the path list
+            pass
         for filepath in filepaths:
             source = filepath
             destination = f'{project_dir}/{source}'
@@ -95,8 +96,7 @@ def main(job_dir: str, bucket_name: str, env: str, dataset: str, dataset_id: str
         from src.data.cookpad.recipes import load_raw_recipes
         docs = load_raw_recipes()
     else:
-        from src.data.msmarco.docs import load_raw_docs
-        docs = load_raw_docs()
+        pass
 
     results = []
     for dataset_id in dataset_ids:
